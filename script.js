@@ -1,7 +1,6 @@
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
-var li = document.querySelectorAll("li");
 
 
 function inputLength() {
@@ -10,7 +9,9 @@ function inputLength() {
 
 function creteListElement() {
 	var li = document.createElement("li");
-	li.appendChild(document.createTextNode(input.value));
+	li.innerHTML = '<span>' + input.value + '</span> <button> X </button>';
+	// console.log(li);
+	// li.appendChild(document.createTextNode(input.value));
 	ul.appendChild(li);
 	input.value = "";
 }
